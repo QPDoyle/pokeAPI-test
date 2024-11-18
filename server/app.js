@@ -9,10 +9,10 @@ app.get('/', (req, res) =>{
 });
 
 app.get('/card', (req, res) => {
-    pokemon.card.find('swsh3-15') //first number = set? (ie swsh 1 = base SWSH base), second alphebetical pos?
+    pokemon.card.find('sv6-121') //first number = set? (ie swsh 1 = base SWSH base), second alphebetical pos?
     .then(card => {
         res.json(card)
-        console.log(card.name) // "Charizard"
+        console.log(card.name)
     })
         .catch(error => {
             res.status(500).json({ error: 'Failed to fetch Pokémon card.' });
@@ -23,7 +23,7 @@ app.use(express.static(path.join(__dirname, '/public')));
 
 app.use((req,res) => {
     res.status('404');
-    res.send(`<h1>Error 404: Resourse not found</h1>`);
+    res.send(`<h1>Error 404: Resource not found</h1>`);
 
 })
 
