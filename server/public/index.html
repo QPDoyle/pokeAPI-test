@@ -12,6 +12,7 @@
             <img id="card-image" src="" alt="Pokémon Card" style="max-width: 300px;">
             <p id="card-name"></p>
             <p id="card-set"></p>
+            <p id="poke-id"></p>
         </div>
 
         <script>
@@ -22,12 +23,14 @@
                     const cardImage = document.getElementById('card-image');
                     const cardName = document.getElementById('card-name');
                     const cardSet = document.getElementById('card-set');
+                    const cardID = document.getElementById('poke-id');
 
                     // Set the src of the image element to the card's image URL
                     cardImage.src = card.images.large;
 
                     cardName.textContent = `Name: ${card.name}`;
                     cardSet.textContent = `Set: ${card.set.name}`;
+                    cardID.textContent = `ID: ${card.set.id}`;
                 })
                 .catch(error => {
                     console.error('Error fetching Pokémon card:', error);
