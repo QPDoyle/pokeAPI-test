@@ -1,16 +1,25 @@
 const express = require('express');
 const path = require('path');
-
 const app = express();
+const pokemon = require('pokemontcgsdk');
+pokemon.configure({apiKey: '46328486-233a-4a85-813b-dbaca8ee8bb3'})
 
-app.get('/api', (req, res)=>{
-    res.json(`HTTP GET Request Recieved.`);
-}) 
 app.get('/', (req, res) =>{
     res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 
-//app.use('/website', express.static(path.join(__dirname, '/public')));
+app.get('/card', (req, res) => {
+    pokemon.card.find('base1-4')
+    .then(card => {
+        res.json(card)
+        console.log(card.name) // "Charizard"
+    })
+        .catch(error => {
+            res.status(500).json({ error: 'Failed to fetch Pokémon card.' });
+        });
+});
+
+app.use(express.static(path.join(__dirname, '/public')));
 
 app.use((req,res) => {
     res.status('404');
