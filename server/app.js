@@ -9,7 +9,7 @@ app.get('/', (req, res) =>{
 });
 
 app.get('/card', (req, res) => {
-    pokemon.card.find('swsh3-28') //first number = set? (ie swsh 1 = base SWSH base), second alphebetical pos?
+    pokemon.card.find('xy8-163') //first number = set? (ie swsh 1 = base SWSH base), second alphebetical pos?
     .then(card => {
         res.json(card)
         console.log(card.name)
@@ -19,7 +19,7 @@ app.get('/card', (req, res) => {
         });
 });
 
-app.use(express.static(path.join(__dirname, '/public')));
+app.use(express.static(path.join(__dirname, '/public'))); //provides a path for static files
 
 app.use((req,res) => {
     res.status('404');
