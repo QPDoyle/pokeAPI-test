@@ -1,0 +1,28 @@
+html {
+    background-color: #3C5AA6;
+}
+
+h1 {
+    color: #FFCE01;
+    text-align: center;
+    font-size: 4.5rem;
+}
+h2 {
+    color: #FFCE01;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+#card-image {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.extra-info{
+    color: #FFCE01;
+    font-weight: 600;
+    padding-top: .5rem;
+    width: 12rem;
+    height: 7.5rem;
+}
