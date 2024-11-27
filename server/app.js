@@ -15,13 +15,13 @@ app.get('/card', (req, res) => {
         console.log(card.name)
     })
         .catch(error => {
-            res.status(500).json({ error: 'Failed to fetch Pokémon card.' });
+            res.status(500).json({ error: 'Failed to fetch Pokémon card.' }); //error handling
         });
 });
 
 app.use(express.static(path.join(__dirname, '/public'))); //provides a path for static files
 
-app.use((req,res) => {
+app.use((req,res) => { // Custum 404 error message
     res.status('404');
     res.send(`<h1>Error 404: Resource not found</h1>`);
 
