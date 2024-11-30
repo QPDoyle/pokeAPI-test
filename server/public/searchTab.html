@@ -9,8 +9,15 @@
             <a href="index.html">Home</a>
         </div>
         <h1>PokeAPI-Test</h1>
+        <label for="poke-search">Enter the Pokemon you wish to search for:</label>
+        <input type="search" id="poke-search"/>
+        <button onclick="search()">Search</button> 
         <div id="card-grid" class="card-grid"></div>
         <script>
+            function search() {
+                const querey = document.getElementById('poke-search').value;
+                console.log(querey); //logs the search value, needs to be linked to api GET before it will actually search.
+            }
             fetch('/cards') // Replace with the actual API endpoint
                 .then(response => response.json())
                 .then(apiResponse => {
@@ -26,15 +33,10 @@
                         const imgElement = document.createElement('img');
                         // Assuming the API provides an `images.large` property for the image URL
                         imgElement.src = card.images.large; // Replace with the actual path to the image
-                        imgElement.alt = card.name; // Use the card's name as alt text
+                        imgElement.setAttribute('id', 'card-image'); // Use the card's name as alt text
 
                         // Append the image to the card container
                         cardElement.appendChild(imgElement);
-
-                        // Add card details as text (optional)
-                        const nameElement = document.createElement('p');
-                        nameElement.textContent = `Name: ${card.name}`;
-                        cardElement.appendChild(nameElement);
 
                         // Append the card to the grid
                         cardGrid.appendChild(cardElement);

@@ -16,10 +16,18 @@ h2 {
     font-size: 2.5rem;
 }
 
-#card-image {
+.card-grid{
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
+    flex-wrap: wrap;
+}
+
+#card-image {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    max-width: 200px;
+    max-height: auto;
 }
 
 .extra-info{
