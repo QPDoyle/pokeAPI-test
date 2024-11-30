@@ -5,6 +5,9 @@
         <title>PokeAPI-Test</title>
     </head>
     <body>
+        <div id='navBar'>
+            <a href="searchTab.html">Search</a>
+        </div>
         <h1>PokeAPI-Test</h1>
         <div id="card-container">
             <h2>Your Card!</h2>
@@ -16,7 +19,6 @@
             </div>
 
         </div>
-
         <script>
             fetch('/card')
                 .then(response => response.json())

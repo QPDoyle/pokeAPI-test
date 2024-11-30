@@ -1,7 +1,10 @@
 html {
     background-color: #3C5AA6;
 }
-
+#navBar{
+    background-color: lightgray;
+    font-size: 1.5rem;
+}
 h1 {
     color: #FFCE01;
     text-align: center;
