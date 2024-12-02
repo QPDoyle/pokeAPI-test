@@ -45,7 +45,9 @@ h2 {
 }
 .extra-info{
     color: #FFCE01;
-    font-weight: 600;
+    font-family: "pixelify-sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     padding-top: .5rem;
     width: 12rem;
     height: 7.5rem;
