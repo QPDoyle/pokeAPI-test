@@ -5,6 +5,7 @@ html {
     background-color: lightgray;
     font-size: 1.5rem;
 }
+
 h1 {
     color: #FFCE01;
     text-align: center;
@@ -29,7 +30,13 @@ h2 {
     max-width: 200px;
     max-height: auto;
 }
-
+#single-card-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 265px;
+    max-height: auto;
+}
 .extra-info{
     color: #FFCE01;
     font-weight: 600;

@@ -11,7 +11,7 @@
         <h1>PokeAPI-Test</h1>
         <div id="card-container">
             <h2>Your Card!</h2>
-            <img id="card-image" src="" alt="Pokémon Card">
+            <img id="single-card-image" src="" alt="Pokémon Card">
             <div class = "extra-info">
                 <p id="card-name"></p>
                 <p id="card-set"></p>
@@ -24,7 +24,7 @@
                 .then(response => response.json())
                 .then(card => {
                     // Get the image and other card details
-                    const cardImage = document.getElementById('card-image');
+                    const cardImage = document.getElementById('single-card-image');
                     const cardName = document.getElementById('card-name');
                     const cardSet = document.getElementById('card-set');
                     const cardID = document.getElementById('poke-id');
