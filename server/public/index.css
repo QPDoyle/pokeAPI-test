@@ -10,11 +10,17 @@ h1 {
     color: #FFCE01;
     text-align: center;
     font-size: 4.5rem;
+    font-family: "hotsy-totsy-mvb", serif;
+    font-weight: 900;
+    font-style: normal;
 }
 h2 {
     color: #FFCE01;
     text-align: center;
     font-size: 2.5rem;
+    font-family: "hotsy-totsy-mvb", serif;
+    font-weight: 900;
+    font-style: normal;
 }
 
 .card-grid{
