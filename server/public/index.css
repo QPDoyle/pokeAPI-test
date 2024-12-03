@@ -2,11 +2,19 @@ html {
     background-color: #3C5AA6;
 }
 #navBar{
-    background-color: lightgray;
+    background-color: whitesmoke;
     font-size: 1.5rem;
     font-family: "pixelify-sans", sans-serif;
     font-weight: 400;
     font-style: normal;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.625rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    margin: 0 auto;
 }
 
 h1 {
@@ -55,12 +63,41 @@ h2 {
     width: 12rem;
     height: 7.5rem;
 }
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%; 
+    margin: 0 auto;
+}
+.search-container i{
+    position: absolute;
+    right: 0.5rem;
+    font-size: 1.25rem;
+    color: #3C5AA6;
+    pointer-events: none;
+}
 #poke-search {
     font-family: "pixelify-sans", sans-serif;
     font-weight: 400;
     font-style: normal;
+    padding: 0.5rem 2rem 0.5rem 0.5rem; 
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    width: 100%;
 }
-.search {
+button {
+    margin-left: 0.5rem; 
+    padding: 1rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    border: none;
+    background-color:#FFCE01;
+    color: white;
+}
+label {
+    color: #FFCE01;
     font-family: "pixelify-sans", sans-serif;
     font-weight: 400;
     font-style: normal;

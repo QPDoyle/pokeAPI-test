@@ -3,6 +3,8 @@
     <head>
         <link rel="stylesheet" href="index.css">
         <link rel="stylesheet" href="https://use.typekit.net/stu8idj.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
         <title>PokeAPI-Test</title>
     </head>
     <body>
@@ -10,9 +12,12 @@
             <a href="index.html">Home</a>
         </div>
         <h1>PokeAPI-Test</h1>
+        <div class="search-container">
         <label for="poke-search">Enter the Pokemon you wish to search for:</label>
         <input type="search" id="poke-search"/>
-        <button onclick="search()">Search</button> 
+        <i class="fas fa-search"></i> 
+        <button onclick="search()"></button>
+        </div> 
         <div id="card-grid" class="card-grid"></div>
         <script>
             function search() {
