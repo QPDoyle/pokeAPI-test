@@ -18,7 +18,28 @@ html {
 }
 #navBar a i{
     color:#3C5AA6;
+    margin-right: 0.5rem;
 }
+#aboutButton {
+    background-color: whitesmoke;
+    font-size: 1.5rem;
+    font-family: "pixelify-sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.625rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    margin: 0 auto;
+}
+#aboutButton a i{
+    color:#3C5AA6;
+    margin-right: 0.5rem;
+}
+
 
 h1 {
     color: #FFCE01;
