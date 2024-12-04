@@ -28,7 +28,6 @@
                 alert('Please enter a Pokémon name to search.');
                 return;
                 }
-        
                 fetch(`/cards?q=${encodeURIComponent(query)}`) // Using q parameter to create correct URL
                     .then(response => response.json())
                     .then(apiResponse => {
