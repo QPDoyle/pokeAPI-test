@@ -9,7 +9,7 @@ app.get('/', (req, res) =>{
 });
 
 app.get('/card', (req, res) => {
-    pokemon.card.find('sv1-244') //first number = set? (ie swsh 1 = base SWSH base), second alphebetical pos?
+    pokemon.card.find('sv1-244') //first number = set? (ie swsh 1 = base SWSH base), card # in set.
     .then(card => {
         res.json(card)
         console.log(card.name)
@@ -20,7 +20,8 @@ app.get('/card', (req, res) => {
 });
 
 app.get('/cards', (req, res) => { //trying to find multiple cards of a single type
-    pokemon.card.where({ q: 'name:ampharos' })
+    const query = req.query.q;
+    pokemon.card.where({ q: `name:${query}`})
     .then(card => {
         res.json(card)
         console.log(card.name)

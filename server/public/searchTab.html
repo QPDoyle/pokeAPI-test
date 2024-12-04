@@ -14,44 +14,50 @@
         </div>
         <h1>PokeAPI-Test</h1>
         <div class="search-container">
-        <label for="poke-search">Enter the Pokemon you wish to search for:</label>
-        <input type="search" id="poke-search"/>
-        <i class="fas fa-search"></i> 
-        <button onclick="search()"></button>
+            <div id="loading" style="display: none;">Loading...</div>
+            <label for="poke-search">Enter the Pokemon you wish to search for:</label>
+            <input type="search" id="poke-search"/>
+            <button onclick="search()">Search</button>
         </div> 
         <div id="card-grid" class="card-grid"></div>
         <script>
             function search() {
-                const querey = document.getElementById('poke-search').value;
-                console.log(querey); //logs the search value, needs to be linked to api GET before it will actually search.
-            }
-            fetch('/cards') // Replace with the actual API endpoint
-                .then(response => response.json())
-                .then(apiResponse => {
-                    const cardData = apiResponse.data; // Assuming the cards are in the "data" array
-                    const cardGrid = document.getElementById('card-grid'); // The container for the grid
+                const query = document.getElementById('poke-search').value.trim();
+                console.log(query); //logs the search value, needs to be linked to api GET before it will actually search.
+                if (!query) { //if search bar empty
+                alert('Please enter a Pokémon name to search.');
+                return;
+                }
+        
+                fetch(`/cards?q=${encodeURIComponent(query)}`) // Using q parameter to create correct URL
+                    .then(response => response.json())
+                    .then(apiResponse => {
+                        const cardData = apiResponse.data; // Assuming the cards are in the "data" array
+                        const cardGrid = document.getElementById('card-grid'); // The container for the grid
+                        cardGrid.innerHTML = '';
 
-                    cardData.forEach(card => {
-                        // Create a card container
-                        const cardElement = document.createElement('div');
-                        cardElement.classList.add('card');
+                        cardData.forEach(card => {
+                            // Create a card container
+                            const cardElement = document.createElement('div');
+                            cardElement.classList.add('card');
 
-                        // Create an image element for the card
-                        const imgElement = document.createElement('img');
-                        // Assuming the API provides an `images.large` property for the image URL
-                        imgElement.src = card.images.large; // Replace with the actual path to the image
-                        imgElement.setAttribute('id', 'card-image'); // Use the card's name as alt text
+                            // Create an image element for the card
+                            const imgElement = document.createElement('img');
+                            // Assuming the API provides an `images.large` property for the image URL
+                            imgElement.src = card.images.large; // Replace with the actual path to the image
+                            imgElement.setAttribute('id', 'card-image'); // Use the card's name as alt text
 
-                        // Append the image to the card container
-                        cardElement.appendChild(imgElement);
+                            // Append the image to the card container
+                            cardElement.appendChild(imgElement);
 
-                        // Append the card to the grid
-                        cardGrid.appendChild(cardElement);
+                            // Append the card to the grid
+                            cardGrid.appendChild(cardElement);
+                        });
+                    })
+                    .catch(error => {
+                        console.error('Error fetching Pokémon cards:', error);
                     });
-                })
-                .catch(error => {
-                    console.error('Error fetching Pokémon cards:', error);
-                });
+            }
         </script>
     </body>
 </html>
