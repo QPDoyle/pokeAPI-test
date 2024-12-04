@@ -16,6 +16,9 @@ html {
     text-align: center;
     margin: 0 auto;
 }
+#navBar a i{
+    color:#3C5AA6;
+}
 
 h1 {
     color: #FFCE01;
@@ -101,4 +104,5 @@ label {
     font-family: "pixelify-sans", sans-serif;
     font-weight: 400;
     font-style: normal;
+    font-size: 1.5rem;
 }
