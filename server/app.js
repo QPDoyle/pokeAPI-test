@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const pokemon = require('pokemontcgsdk');
-pokemon.configure({apiKey: '46328486-233a-4a85-813b-dbaca8ee8bb3'})
+pokemon.configure({apiKey: 'fe6f1f9a-7038-4be3-93f3-85fcdf879587'})
 
 app.get('/', (req, res) =>{
     res.sendFile(path.join(__dirname, 'public/index.html'));
