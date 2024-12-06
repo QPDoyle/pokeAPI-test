@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "build": "npm run build",
-    "predeploy": "npm run test",
+    "build": "npx nodemon app.js",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
