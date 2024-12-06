@@ -1,8 +1,10 @@
 {
   "name": "server",
+  "homepage": "https://qpdoyle.github.io/pokeAPI-Test",
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
+    "build": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -15,6 +17,7 @@
     "pokemontcgsdk": "^2.0.0"
   },
   "devDependencies": {
+    "gh-pages": "^6.2.0",
     "nodemon": "^3.1.7"
   }
 }
