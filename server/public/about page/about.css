@@ -102,14 +102,7 @@ h3 {
     padding-bottom: 1rem;
     max-width: 200px;
     max-height: auto;
-    transition: transform 0.5s ease;
 }
-
-/*Hover effect for cards*/
-#card-image:hover {
-    transform: scale(1.4);
-}
-
 #single-card-image {
     display: block;
     margin-left: auto;
@@ -125,44 +118,4 @@ h3 {
     padding-top: .5rem;
     width: 12rem;
     height: 7.5rem;
-}
-.search-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: 100%; 
-    margin: 0 auto;
-}
-.search-container i{
-    position: absolute;
-    right: 0.5rem;
-    font-size: 1.25rem;
-    color: #3C5AA6;
-    pointer-events: none;
-}
-#poke-search {
-    font-family: "pixelify-sans", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    padding: 0.5rem 2rem 0.5rem 0.5rem; 
-    font-size: 1rem;
-    border-radius: 0.25rem;
-    width: 100%;
-}
-button {
-    margin-left: 0.5rem; 
-    padding: 1rem 1rem;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 0.25rem;
-    border: none;
-    background-color:#FFCE01;
-    color: white;
-}
-label {
-    color: #FFCE01;
-    font-family: "pixelify-sans", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.5rem;
 }
