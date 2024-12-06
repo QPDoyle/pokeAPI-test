@@ -70,7 +70,14 @@ h2 {
     padding-bottom: 1rem;
     max-width: 200px;
     max-height: auto;
+    transition: transform 0.5s ease;
 }
+
+/*Hover effect for cards*/
+#card-image:hover {
+    transform: scale(1.4);
+}
+
 #single-card-image {
     display: block;
     margin-left: auto;
