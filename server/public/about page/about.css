@@ -84,10 +84,22 @@ h3 {
     font-weight:900;
     font-style:normal;
 }
+p {
+    color: black;
+    font-family: "pixelify-sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding-top: .5rem;
+    width: 12rem;
+    height: 7.5rem;
+    font-size: 2rem;
+    width: 100%;
+}
+
 #team{
     display: flex;
     justify-content: space-evenly;
-    gap:2rem;
+    gap:3.5rem;
 }
 #sprites{
     display:flex;
@@ -105,8 +117,8 @@ img {
 }
 
 #sprites img {
-    width: 7rem; /* You can adjust this as needed */
-    height: 7rem; /* Same here */
+    width: 8rem; /* You can adjust this as needed */
+    height: 8rem; /* Same here */
     transition: transform 0.3s ease; /* Ensures smooth scaling of the image */
 }
 
@@ -118,12 +130,56 @@ img {
     transform: scale(1.1); /* Optional: Scales the link (a) itself, if you want the area around the image to scale too */
 }
 
+
+.profile-container {
+    display: flex; 
+    flex-direction:row;
+    justify-content: flex-start;
+}
+.profilesprite {
+    margin-left: 1rem;
+    animation: bounce 1s ease-in-out infinite;
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.profilesprite img {
+    width: 15rem;
+    height: 15rem;
+    
+}
+
+.bodytext {
+   margin-left: 2rem;
+   margin-right: 1rem;
+   margin-bottom: 1rem;
+   flex-grow: 1;
+   width: 100%;
+}
+
+.bodytext p {
+    background-color: white; 
+    border: 0.125rem solid black; 
+    padding: 0.625rem; 
+    width: fit-content; 
+    height: fit-content;
+    margin: 0; 
+}
+
+
 .card-grid{
     display: flex;
     flex-wrap: wrap;
 }
-
-
 
 #card-image {
     padding-left: 1rem;
