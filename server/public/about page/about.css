@@ -99,11 +99,31 @@ img {
     height:7rem;
     display:block;
 }
+#sprites a {
+    display: inline-block; /* Ensures that the anchor behaves like an inline element */
+    transition: transform 0.3s ease; /* Adds smooth transition for scaling effect */
+}
+
+#sprites img {
+    width: 7rem; /* You can adjust this as needed */
+    height: 7rem; /* Same here */
+    transition: transform 0.3s ease; /* Ensures smooth scaling of the image */
+}
+
+#sprites a:hover img {
+    transform: scale(1.1); /* Slightly scales up the image when hovered */
+}
+
+#sprites a:hover {
+    transform: scale(1.1); /* Optional: Scales the link (a) itself, if you want the area around the image to scale too */
+}
 
 .card-grid{
     display: flex;
     flex-wrap: wrap;
 }
+
+
 
 #card-image {
     padding-left: 1rem;
