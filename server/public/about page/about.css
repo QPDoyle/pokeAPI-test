@@ -89,6 +89,16 @@ h3 {
     justify-content: space-evenly;
     gap:2rem;
 }
+#sprites{
+    display:flex;
+    justify-content:space-evenly;
+    gap:2rem;
+}
+img {
+    width:7rem;
+    height:7rem;
+    display:block;
+}
 
 .card-grid{
     display: flex;
