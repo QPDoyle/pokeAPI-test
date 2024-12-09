@@ -12,5 +12,5 @@
 - This will show the front end info of the card being displayed, to see the back end add **/card** to the browser.
 
 #### Helpful Info/Links:
--   This uses nodejs which is a laungrage built around java script and there are many helpful tutorials on YT.
+-   This uses nodejs which is a launguage built around java script and there are many helpful tutorials on YT.
 -  **https://docs.pokemontcg.io/** documentation guide for the api click through for JS specifics.
