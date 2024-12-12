@@ -212,12 +212,12 @@ img {
 /* Carousel Container */
 .carousel-container {
     width: 100%;  /* Full width of the parent container */
-    max-width: 75%;  /* Optional: Limit max width for carousel */
+    max-width: 77.1%;  /* Optional: Limit max width for carousel */
     height: 100%;  /* Set the height for carousel */
     overflow: hidden;  /* Hide content outside of the container */
     margin: 0 auto;  /* Center the carousel */
     position: relative;  /* Ensure that child elements are positioned correctly */
-    background-color: #3C5AA6;  /* Optional: Background color */
+    background-color: #ffffff;  /* Optional: Background color */
   }
   
   /* Image Carousel */
@@ -258,3 +258,15 @@ img {
     100% { transform: translateX(0%); }     /* Loop back to first image */
   }
   
+
+#tutorial-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#tutorial-image {
+    width: 75.2%;
+    height: auto;
+    border: 15px solid white;
+}
