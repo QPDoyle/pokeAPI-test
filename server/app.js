@@ -9,7 +9,7 @@ app.get('/', (req, res) =>{
 });
 
 app.get('/card', (req, res) => {
-    pokemon.card.find('sv1-244') //first number = set? (ie swsh 1 = base SWSH base), card # in set.
+    pokemon.card.find('hgss3-82') //first number = set? (ie swsh 1 = base SWSH base), card # in set.
     .then(card => {
         res.json(card)
         console.log(card.name)
