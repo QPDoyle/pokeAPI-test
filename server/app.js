@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const pokemon = require('pokemontcgsdk');
-pokemon.configure({apiKey: 'fe6f1f9a-7038-4be3-93f3-85fcdf879587'})
+pokemon.configure({apiKey: '46328486-233a-4a85-813b-dbaca8ee8bb3'})
 
 app.get('/', (req, res) =>{
     res.sendFile(path.join(__dirname, 'public/index.html'));
@@ -39,7 +39,6 @@ app.use((req,res) => { // Custum 404 error message
     res.send(`<h1>Error 404: Resource not found</h1>`);
 
 })
-
 
 app.listen(3000, () =>{
     console.log("Website is live!");
