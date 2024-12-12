@@ -5,7 +5,7 @@ const pokemon = require('pokemontcgsdk');
 pokemon.configure({apiKey: '46328486-233a-4a85-813b-dbaca8ee8bb3'})
 
 app.get('/', (req, res) =>{
-    res.sendFile(path.join(__dirname, 'public/index.html'));
+    res.sendFile(path.join(__dirname, 'public/intro/intro.html'));
 });
 
 app.get('/card', (req, res) => {
